@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Copy Rich URL - Options</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+    .section {
+      margin-bottom: 30px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border: 1px solid #eee;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    .shortcut-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .shortcut-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <img src="../icons/icon32.png" alt="Icon" class="icon">
+    Copy Rich URL
+  </h1>
+
+  <div class="section">
+    <h2>What it does</h2>
+    <p>
+      This extension copies the current page's URL and Title as a rich HTML link. 
+      When you paste it into a rich text editor (like Outlook, Word, or Slack), 
+      it will appear as a clickable link: <code><a href="...">Title</a></code>.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>How to use</h2>
+    <ul>
+      <li>Click the extension icon in the toolbar.</li>
+      <li>Right-click anywhere on a page and select <strong>Copy Rich URL</strong>.</li>
+      <li>Use the keyboard shortcut (configurable below).</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Keyboard Shortcut</h2>
+    <p>
+      You can configure a custom keyboard shortcut to copy the rich URL instantly.
+    </p>
+    <a href="#" id="configure-shortcuts" class="shortcut-link">Configure Keyboard Shortcut →</a>
+    <p><small>(This will open Chrome's extension shortcut settings)</small></p>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
