@@ -1,5 +1,7 @@
 # Copy Rich URL - Chrome Extension
 
+by David W. Jeske, (C)opyright 2026
+
 A lightweight Chrome extension that copies the current page's URL and Title as a rich HTML link (`<a href="URL">Title</a>`) to your clipboard.
 
 ![Copy Rich URL Screenshot](icons_source/screenshot-image-1.jpg)
@@ -16,6 +18,7 @@ A lightweight Chrome extension that copies the current page's URL and Title as a
 Chrome's Clipboard API requires **user activation** (a user gesture like a click) to write rich HTML content to the clipboard. This is a security feature to prevent malicious extensions from silently modifying your clipboard.
 
 The popup provides this user activation through the button click. Without it, we would need to:
+
 - Request `scripting` permission to inject code into every page (security risk), OR
 - Use deprecated/unreliable methods like `document.execCommand('copy')`
 
