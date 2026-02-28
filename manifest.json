@@ -4,14 +4,8 @@
   "version": "1.0",
   "description": "Copies the current page URL as a rich HTML link.",
   "permissions": [
-    "activeTab",
-    "contextMenus",
-    "offscreen",
-    "scripting"
+    "activeTab"
   ],
-  "background": {
-    "service_worker": "src/extension_service_worker.js"
-  },
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",
@@ -27,15 +21,6 @@
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  },
-  "commands": {
-    "copy-rich-url": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+C",
-        "mac": "Command+Shift+C"
-      },
-      "description": "Copy Rich URL"
-    }
   },
   "options_page": "src/options.html"
 }

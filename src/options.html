@@ -53,28 +53,32 @@
   <div class="section">
     <h2>What it does</h2>
     <p>
-      This extension copies the current page's URL and Title as a rich HTML link. 
-      When you paste it into a rich text editor (like Outlook, Word, or Slack), 
-      it will appear as a clickable link: <code><a href="...">Title</a></code>.
+      This extension copies the current page's URL and Title as a rich HTML link.
+      When you paste it into a rich text editor (like Outlook, Word, or Slack),
+      it will appear as a clickable link: <code>&lt;a href="..."&gt;Title&lt;/a&gt;</code>.
     </p>
   </div>
 
   <div class="section">
     <h2>How to use</h2>
-    <ul>
-      <li>Click the extension icon in the toolbar.</li>
-      <li>Right-click anywhere on a page and select <strong>Copy Rich URL</strong>.</li>
-      <li>Use the keyboard shortcut (configurable below).</li>
-    </ul>
+    <ol>
+      <li>Click the extension icon in the toolbar</li>
+      <li>Click the "Copy Current URL" button in the popup</li>
+      <li>Paste into any rich text editor</li>
+    </ol>
   </div>
 
   <div class="section">
-    <h2>Keyboard Shortcut</h2>
+    <h2>Why a popup with a button?</h2>
     <p>
-      You can configure a custom keyboard shortcut to copy the rich URL instantly.
+      Chrome's Clipboard API requires <strong>user activation</strong> (a user gesture like a click) to write rich HTML content to the clipboard. This is a security feature to prevent malicious extensions from silently modifying your clipboard.
     </p>
-    <a href="#" id="configure-shortcuts" class="shortcut-link">Configure Keyboard Shortcut →</a>
-    <p><small>(This will open Chrome's extension shortcut settings)</small></p>
+    <p>
+      The popup button provides this user activation. Without it, we would need to request <code>scripting</code> permission to inject code into every page you visit (a security risk), or use deprecated/unreliable clipboard methods.
+    </p>
+    <p>
+      <strong>This popup approach is the cleanest, most secure solution that works reliably across all websites.</strong>
+    </p>
   </div>
 
   <script src="options.js"></script>
