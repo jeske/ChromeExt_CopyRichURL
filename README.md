@@ -2,6 +2,8 @@
 
 A lightweight Chrome extension that copies the current page's URL and Title as a rich HTML link (`<a href="URL">Title</a>`) to your clipboard.
 
+![Copy Rich URL Screenshot](icons_source/screenshot-image-1.jpg)
+
 ## Features
 
 - **Rich Copy**: Copies a rich text link that will be pasted as a hyperlink in rich text editors (Outlook, Slack, Word, etc.).
